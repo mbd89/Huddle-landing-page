@@ -6,8 +6,8 @@ This is a solution to the [Huddle landing page with alternating feature blocks c
 
 
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- 
+- Live Site URL: https://mbd89.github.io/Huddle-landing-page/
 
 ## My process
 
