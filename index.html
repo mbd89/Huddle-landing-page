@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;500;600&family=League+Spartan:wght@100&family=Outfit:wght@200&family=Poppins:wght@100;600&family=Public+Sans:ital,wght@0,300;1,400&family=Raleway:ital,wght@1,700&family=Roboto+Flex:opsz,wght@8..144,100&family=Roboto:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;500;600&family=League+Spartan:wght@100&family=Open+Sans:wght@300;400;700&family=Outfit:wght@200&family=Poppins:wght@100;600&family=Public+Sans:ital,wght@0,300;1,400&family=Raleway:ital,wght@1,700&family=Roboto+Flex:opsz,wght@8..144,100&family=Roboto:wght@100&display=swap" rel="stylesheet">  
+  <title>Frontend Mentor | Huddle landing page with alternating feature blocks</title>
+
+<style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+.top{
+  background-image: url(images/bg-hero-desktop.svg);
+  background-color: hsl(193, 100%, 96%);
+}
+body{
+  font-family: 'Open Sans';
+}
+button{
+  cursor: pointer;
+}
+.huddle{
+  font-family:'Poppins';
+  font-weight: bold 600;
+  padding: 20px;
+}
+.try{
+  border: none;
+color:black;
+background: white;
+border-radius: 25px;
+margin-right: 50px;
+padding: 10px;
+padding-right: 40px;
+padding-left: 40px;
+font-weight: bold;
+}
+.started{
+color: white;
+background-color: hsl(322, 100%, 66%);
+border-radius: 25px;
+border: none;
+padding: 15px;
+font-weight: bold;
+padding-left:40px ;
+padding-right: 40px;
+}
+.started:hover{
+  opacity: 0.3;
+}
+
+.level1{
+  display: flex;
+  gap: 20px;
+}
+
+#mockup{
+  max-width:80%;
+}
+
+.head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  
+}
+.leftside{
+  padding: 20px;
+}
+.topimage{
+  padding-bottom: 20px;
+}
+.grow{
+  border: 1px solid white;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  max-width: 70%;
+  margin-top: 50Px;
+  padding: 40px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+#grow{
+  max-width: 80%;
+}
+.generate{
+  color: gray;
+}
+
+.leftext{
+  padding: 20px;
+}
+
+.bottomcontainer{
+  display: flex;
+   justify-content: center;
+   align-items: center;
+  flex-direction: column;
+}
+.ready{
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding: 25px;
+  margin-top: 50px;
+  width: 50%;
+  margin-bottom: -45px;
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 50%;
+}
+.hudle{
+  color: white;
+  
+}
+.darkb{
+  display: flex;
+  background-color: hsl(192, 100%, 9%);
+  position: relative;
+  z-index: -1;
+  gap: 50px;
+  padding: 40px;
+  
+}
+
+
+.hud, .about, .career{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  
+}
+
+.botto{ 
+line-height: 1.7;
+align-self:flex-end ;
+}
+
+
+.hud{
+gap: 30px;
+
+}
+
+.white{
+  color: white;
+}
+
+.dark{
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+
+.filter-white{
+ filter: brightness(0) invert(1);
+
+}
+
+
+.txt{
+  margin-left: 15px;
+}
+.lo{
+  display: flex;
+  gap: 30px;
+}
+.lorem{
+  margin-top: -5px;
+}
+
+#icon{
+  height: 20px;
+  width: auto;
+
+}
+
+.icons{
+  display: flex;
+  gap: 10px;
+  margin-top: -90px;
+  margin-right: -180px;
+}
+
+@media (min-width: 280px) and (max-width: 765px){
+ 
+  .level1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+  }
+ .grow{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+ }
+.hud{
+  display: flex;
+  flex-direction: column;
+}
+.dark{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.rightimage{
+  order: -1;
+}
+
+.about, .career{
+ margin-left: -250px;
+}
+.about{
+  margin-bottom: -100px;
+}
+.icons{
+  margin-left: auto;
+  margin-right: auto;
+}
+.head{
+  display:flex;
+ 
+}
+
+.huddle{
+width: 100px;
+padding: 5px;
+}
+
+
+.top{
+  background-image: url(images/bg-hero-mobile.svg);
+  background-color: hsl(193, 100%, 96%);
+}
+.ready{
+  width: 80%;
+}
+
+.try{
+  border: none;
+color:black;
+background: white;
+border-radius: 25px;
+
+padding: 10px;
+padding-right: 40px;
+padding-left: 40px;
+font-weight: bold;
+}
+
+
+}
+
+
+  </style>
+</head>
+<body>
+ <div class="top">
+
+  <div class="head"> 
+
+    <div class="one"> 
+      <img class="huddle" src="images/logo.svg" alt="">
+    </div> 
+  <div class="two"> 
+    <button class="try">Try It Free</button>
+  </div>
+  </div>
+  
+  <div class="level1"> 
+    <div class="leftside"> 
+  <h2 class="love">Build The Community<br>Your Fans Will Love</h2>
+ 
+
+ <p class="firstp">Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
+  Create connections with your users as you engage in genuine discussion.</p>
+<button class="started"> Get Started For Free </button>
+</div>
+
+    <div class="topimage">
+    <img id="mockup" src="images/illustration-mockups.svg" alt="">
+    </div>
+
+  </div>
+
+
+</div>
+
+
+<div class="bottomcontainer"> 
+
+  <div class="grow">
+
+    <div class="leftext"> 
+    <h3>Grow Together</h3>
+<p class="generate">Generate meaningful discussions with your audience and build a strong, loyal community. 
+  Think of the insightful conversations you miss out on with a feedback form.</p>
+</div>
+   <div class="rightimage"> 
+  <img id="grow" src="images/illustration-grow-together.svg" alt="">
+   </div>
+</div>
+
+ <div class="grow"> 
+
+<div class="leftimage">
+  <img id="grow" src="images/illustration-flowing-conversation.svg" alt="">
+</div>
+
+<div class="leftext"> 
+<h3>Flowing Conversations</h3>
+<p class="generate">You wouldn't paginate a conversation in real life, so why do it online? Our threads 
+  have just-in-time loading for a more natural flow.</p>
+</div>
+
+
+
+   </div> 
+
+   <div class="grow">
+
+    <div class="leftex">
+   <h3>Your Users </h3>
+<p class="generate">It takes no time at all to integrate Huddle with your app's authentication solution. 
+  This means, once signed in to your app, your users can start chatting immediately.</p>
+</div>
+
+<div class="rightimage">
+  <img id="grow" src="images/illustration-your-users.svg" alt="">
+</div>
+
+   </div>
+   
+  <div class="ready">
+    
+    <div class="content"> 
+   <h4>Ready To Build Your Community?</h4> 
+    <button class="started">Get Started For Free </button>
+  </div>
+  </div> 
+
+
+
+</div>
+
+<div class="darkb"> 
+   <div class="dark"> 
+  <div class="hud"> 
+  <div class="hudle"> 
+    <img class="filter-white" src="images/logo.svg">
+  </div>
+
+  <div class="lo"> 
+    <div> 
+    <img src="images/icon-location.svg" alt=""></div>
+    <div> 
+    <p class="lorem">Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit, sed do eiusmod tempor<br>
+      incididunt ut labore et dolore magna aliqua</p> 
+  </div> 
+  </div> 
+
+
+<div class="phone"> 
+ <img  src="images/icon-phone.svg" alt=""> <span class="txt">+1-543-123-4567</span>
+</div>
+
+<div class="mail"> 
+<img  src="images/icon-email.svg" alt=""> <span class="txt">example@huddle.com</span>
+</div>
+
+</div>
+
+  <div class="about"> 
+ <p>About Us</p>
+ <p>What We Do</p>
+  <p>FAQ</p>
+</div> 
+  
+<div class="career"> 
+  <p>Career</p>
+  <p>Blog</p>
+  <p>Contact Us</p>
+
+</div>
+
+<div class="icons">
+  <div class="socials"><img id="icon" class="filter-white" src="images/facebook.png" alt=""></div>
+  <div class="socials"><img id="icon" class="filter-white" src="images/twitter.png" alt=""></div> 
+  <div class="socials"><img id="icon" class="filter-white" src="images/instagram.png" alt=""></div>
+</div>
+
+
+<div class="botto"> 
+  <span class="white">&copy;</span> <span class="white">Copyright 2018 Huddle. All rights reserved</span> 
+</div>
+</div>
+</div>
+
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Makha Diagne</a>.
+    </p>
+  </footer>
+</body>
+</html>
